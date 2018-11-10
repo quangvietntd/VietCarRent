@@ -1,0 +1,188 @@
+﻿
+body
+{
+    background: #5c87b2;
+    background-image: url("./background_car_rent.png");
+    font-size: 75%;
+    font-family:Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+}
+.hd_line
+{
+    height:1px;
+    background-image: url("./line.png");
+    width:100%;
+    margin:10px 0 20px;
+}
+.rent_title
+{
+   color: #d4f4fc;
+   font-size:18px;
+}
+.rent_small
+{
+   color: #d4e6fc;
+   font-size:10px;
+}
+
+.search_form  
+{
+    width:173px;
+    height:350px;
+    padding:15px 20px;
+    background-repeat:repeat-x;
+    background-image: url("./bg_form.png");
+}
+
+
+.message
+{
+    text-align:right;
+    color:White;
+    font-size:18px;
+    height:24px;
+    padding:5px;
+}
+.car_brand, .car_price
+{
+    border-left:none !important;
+    overflow:hidden;
+}
+.car_price
+{
+    color:Gray;
+    width:100%;
+    font-size:10px;
+    margin-top:2px;
+    text-align:center;
+}
+.car_brand
+{
+    white-space:nowrap;
+    margin-top:-4px;
+    color:Black;
+    font-weight:bold;
+}
+
+
+
+.search_form input
+{
+    height:18px;
+}
+.search_form select
+{
+    height:19px;
+   vertical-align:top;
+}
+.search_form option
+{
+    vertical-align:middle;
+}
+.search_form select, .search_form    input
+{
+    font-size:11px;
+    width:170px;
+    padding: 0;
+    margin: 5px 0;
+}
+
+#submit
+{
+    width: 170px;
+    height: 23px;
+    border: 0 none;
+    background-color: #EFEFEF;
+    line-height: 23px;
+    margin-top: 3px;
+    font-weight:bold;
+}
+.search_form  
+{
+       border:none;
+      
+       color:#eee;
+}
+
+.search_form  .controls > div
+{
+    margin-top:9px;
+}
+
+.check_dates
+{
+    line-height:14px;
+    margin-bottom:-10px;
+    margin-top:0 !important;
+
+}
+.check_dates > input
+{
+    width:20px;
+    vertical-align:middle;
+}
+
+
+
+#DateFrom, #DateTo
+{
+    width:80px;
+}
+#TimeFrom, #TimeTo
+{
+    width:60px;
+}
+.date_calendar
+{
+    cursor:pointer;
+    height:18px;
+    left:-2px;
+    position:relative;
+    vertical-align:baseline;
+    top:1px;
+    width:18px;
+     
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#main
+{
+    padding: 30px 30px 15px 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+
+
+.clear
+{
+    clear: both;
+}
+
+
+.page
+{
+    width:1200px;
+}
+      
+#main
+{
+    padding:0;
+}
+.minical_container
+{
+    position:absolute;
+    width:200px;
+}

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLBanXe" Class="LinQtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\QLBanXe.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLBanXeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Loai_Xe" Member="Loai_Xes">
+    <Type Name="Loai_Xe">
+      <Column Name="Ma_Loai_Xe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten_Loai_Xe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Loai_Xe_Xe" Member="Xes" ThisKey="Ma_Loai_Xe" OtherKey="Loai_Xe" Type="Xe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Khuyen_Mai" Member="Khuyen_Mais">
+    <Type Name="Khuyen_Mai">
+      <Column Name="Ma_KM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ma_Xe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KhuyenMai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ngay_Bat_Dau" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Ngay_Ket_Thuc" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Xe_Khuyen_Mai" Member="Xe" ThisKey="Ma_Xe" OtherKey="Ma_Xe" Type="Xe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nguoi_Dung" Member="Nguoi_Dungs">
+    <Type Name="Nguoi_Dung">
+      <Column Name="Ma_Nguoi_Dung" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten_Nguoi_Dung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mat_Khau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Admin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ho_Ten" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Gioi_Tinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dia_Chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="Nguoi_Dung_Thue_Xe" Member="Thue_Xes" ThisKey="Ma_Nguoi_Dung" OtherKey="userid" Type="Thue_Xe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Xe" Member="Xes">
+    <Type Name="Xe">
+      <Column Name="Ma_Xe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Loai_Xe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ten_xe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Thong_Tin" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Hinh_Anh" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mau_Sac" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KT_Tong_The" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Chieu_Dai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Chieu_Rong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trong_Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Loai_Dong_Co" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Dung_Tich" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cong_Suat" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mo_men" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Van_Toc_Toi_Da" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Dung_Tich_Nhien_Lieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hop_So" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="So_Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Xe_Khuyen_Mai" Member="Khuyen_Mais" ThisKey="Ma_Xe" OtherKey="Ma_Xe" Type="Khuyen_Mai" />
+      <Association Name="Xe_Thue_Xe" Member="Thue_Xes" ThisKey="Ma_Xe" OtherKey="carid" Type="Thue_Xe" />
+      <Association Name="Loai_Xe_Xe" Member="Loai_Xe1" ThisKey="Loai_Xe" OtherKey="Ma_Loai_Xe" Type="Loai_Xe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Van_Phong" Member="Van_Phongs">
+    <Type Name="Van_Phong">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ten_VP" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="Van_Phong_Thue_Xe" Member="Thue_Xes" ThisKey="id" OtherKey="pick_location" Type="Thue_Xe" />
+      <Association Name="Van_Phong_Thue_Xe1" Member="Thue_Xes1" ThisKey="id" OtherKey="drop_location" Type="Thue_Xe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Trang_Thai" Member="Trang_Thais">
+    <Type Name="Trang_Thai">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tinh_trang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Trang_Thai_Thue_Xe" Member="Thue_Xes" ThisKey="id" OtherKey="tinh_trang" Type="Thue_Xe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Thue_Xe" Member="Thue_Xes">
+    <Type Name="Thue_Xe">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="start_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="end_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="pick_location" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="drop_location" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="carid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="tinh_trang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thanh_tien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Nguoi_Dung_Thue_Xe" Member="Nguoi_Dung" AccessModifier="Internal" ThisKey="userid" OtherKey="Ma_Nguoi_Dung" Type="Nguoi_Dung" IsForeignKey="true" />
+      <Association Name="Trang_Thai_Thue_Xe" Member="Trang_Thai" AccessModifier="Internal" ThisKey="tinh_trang" OtherKey="id" Type="Trang_Thai" IsForeignKey="true" />
+      <Association Name="Van_Phong_Thue_Xe" Member="Van_Phong" AccessModifier="Internal" ThisKey="pick_location" OtherKey="id" Type="Van_Phong" IsForeignKey="true" />
+      <Association Name="Van_Phong_Thue_Xe1" Member="Van_Phong1" AccessModifier="Internal" ThisKey="drop_location" OtherKey="id" Type="Van_Phong" IsForeignKey="true" />
+      <Association Name="Xe_Thue_Xe" Member="Xe" AccessModifier="Internal" ThisKey="carid" OtherKey="Ma_Xe" Type="Xe" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

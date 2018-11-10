@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.5" name="LinQtoSQL">
+  <DataContextMoniker Name="/LinQtoSQLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="205a2290-9c3e-4ca3-b597-05255898596d" absoluteBounds="7.625, 4, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LinQtoSQLDataContext/Loai_Xe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f21f4ab2-26ba-49e1-839c-0200ebae1569" absoluteBounds="7.6400000000000006, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b96b9bcb-fc94-4fa3-b81f-49375e6db409" absoluteBounds="0.5, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/LinQtoSQLDataContext/Khuyen_Mai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b7aa369-4fad-4c4a-affa-8d6bbea936ed" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ae15542-a90f-476a-811d-bd49b2cd8e94" absoluteBounds="2.625, 2.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LinQtoSQLDataContext/Nguoi_Dung" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aeef7c40-046b-4f3e-8098-fb2e828c731b" absoluteBounds="2.6400000000000006, 3.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f87ec33b-b6ba-47f2-9e32-85d6e07cbad6" absoluteBounds="0.5, 3.25, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/LinQtoSQLDataContext/Xe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="802de5fb-7ad5-463d-9d09-0d0672b2cc6a" absoluteBounds="0.51500000000000012, 3.71, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.0625 : 3.25); (2.0625 : 2.27089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinQtoSQLDataContext/Xe/Xe_Khuyen_Mai" />
+      <nodes>
+        <classShapeMoniker Id="f87ec33b-b6ba-47f2-9e32-85d6e07cbad6" />
+        <classShapeMoniker Id="b96b9bcb-fc94-4fa3-b81f-49375e6db409" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.625 : 5.19399251302083); (8.625 : 6.74660484700521); (6.36458333333333 : 6.74660484700521 : JumpStart); (6.19791666666667 : 6.74660484700521 : JumpEnd); (6.00520583333333 : 6.74660484700521 : JumpStart); (5.83853916666667 : 6.74660484700521 : JumpEnd); (5.05208333333333 : 6.74660484700521 : JumpStart); (4.88541666666667 : 6.74660484700521 : JumpEnd); (4.02083333333333 : 6.74660484700521 : JumpStart); (3.85416666666667 : 6.74660484700521 : JumpEnd); (2.5 : 6.74660484700521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinQtoSQLDataContext/Loai_Xe/Loai_Xe_Xe" />
+      <nodes>
+        <classShapeMoniker Id="205a2290-9c3e-4ca3-b597-05255898596d" />
+        <classShapeMoniker Id="f87ec33b-b6ba-47f2-9e32-85d6e07cbad6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="80e4ec69-2496-4982-ad5b-5bd7c245ba1a" absoluteBounds="5.625, 3.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LinQtoSQLDataContext/Van_Phong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1508c2e-5c2e-4b74-aee1-6a332e187f93" absoluteBounds="5.64, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9455502e-388d-4c2c-bd74-eb57c818f66d" absoluteBounds="0.875, 8.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LinQtoSQLDataContext/Trang_Thai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f62f124-4368-4cd9-8442-eb38cb569ad6" absoluteBounds="0.89000000000000012, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f00dc8c6-7d23-4594-8f21-a142be99da7a" absoluteBounds="3.25, 7.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LinQtoSQLDataContext/Thue_Xe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a3c813d-f58d-4fff-a279-16737e918525" absoluteBounds="3.265, 7.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.9375 : 5.48240397135417); (3.9375 : 7.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinQtoSQLDataContext/Nguoi_Dung/Nguoi_Dung_Thue_Xe" />
+      <nodes>
+        <classShapeMoniker Id="9ae15542-a90f-476a-811d-bd49b2cd8e94" />
+        <classShapeMoniker Id="f00dc8c6-7d23-4594-8f21-a142be99da7a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 9.34699625651042); (3.25 : 9.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinQtoSQLDataContext/Trang_Thai/Trang_Thai_Thue_Xe" />
+      <nodes>
+        <classShapeMoniker Id="9455502e-388d-4c2c-bd74-eb57c818f66d" />
+        <classShapeMoniker Id="f00dc8c6-7d23-4594-8f21-a142be99da7a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.28125 : 4.31899251302083); (6.28125 : 8.86620198567708); (5.25 : 8.86620198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinQtoSQLDataContext/Van_Phong/Van_Phong_Thue_Xe" />
+      <nodes>
+        <classShapeMoniker Id="80e4ec69-2496-4982-ad5b-5bd7c245ba1a" />
+        <classShapeMoniker Id="f00dc8c6-7d23-4594-8f21-a142be99da7a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.9218725 : 4.31899251302083); (5.9218725 : 8.15184849283854); (5.25 : 8.15184849283854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinQtoSQLDataContext/Van_Phong/Van_Phong_Thue_Xe1" />
+      <nodes>
+        <classShapeMoniker Id="80e4ec69-2496-4982-ad5b-5bd7c245ba1a" />
+        <classShapeMoniker Id="f00dc8c6-7d23-4594-8f21-a142be99da7a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 5.99320469401042); (3.85416666666667 : 5.99320469401042 : JumpStart); (4.02083333333333 : 5.99320469401042 : JumpEnd); (4.96875 : 5.99320469401042); (4.96875 : 7.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinQtoSQLDataContext/Xe/Xe_Thue_Xe" />
+      <nodes>
+        <classShapeMoniker Id="f87ec33b-b6ba-47f2-9e32-85d6e07cbad6" />
+        <classShapeMoniker Id="f00dc8c6-7d23-4594-8f21-a142be99da7a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
